@@ -16,7 +16,7 @@ namespace weightlifting{
             InitializeComponent();
         }
 
-        private void add_button_Click(object sender, EventArgs e)        {
+        public void add_button_Click(object sender, EventArgs e)        {
             if (textBox_fname.TextLength < 2 || textBox_lname.TextLength < 2)            {
                 var res = MessageBox.Show("Введите значения!", "Ошибка!", MessageBoxButtons.OK);
                 return;
@@ -30,7 +30,7 @@ namespace weightlifting{
             };
 
             athletes.summary_res = athletes.snatch + athletes.clean_jerk;
-
+            
             if (radioButton_gmen.Checked)
                 athletes.gender = "Муж.";
             else
@@ -97,6 +97,24 @@ namespace weightlifting{
                 Environment.Exit(0);
             }
             else return;
+        }
+
+        private void copyrightsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            about aboutForm = new about();
+            aboutForm.ShowDialog();
+        }
+
+        private void numericUpDown_snatch_ValueChanged(object sender, EventArgs e)
+        {
+            int sum = (int)numericUpDown_clean_jerk.Value + (int)numericUpDown_snatch.Value;
+            label_summ.Text = sum.ToString();
+        }
+
+        private void numericUpDown_clean_jerk_ValueChanged(object sender, EventArgs e)
+        {
+            int sum = (int)numericUpDown_clean_jerk.Value + (int)numericUpDown_snatch.Value;
+            label_summ.Text = sum.ToString();
         }
     }
 }

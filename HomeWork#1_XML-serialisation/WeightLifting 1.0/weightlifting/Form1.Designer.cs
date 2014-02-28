@@ -51,20 +51,23 @@
             this.radioButton_gmen = new System.Windows.Forms.RadioButton();
             this.radioButton_gwomen = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label_summ = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label_summ = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDown_bWeight = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_snatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_clean_jerk)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_bWeight)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -134,6 +137,7 @@
             this.viewHelpToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.viewHelpToolStripMenuItem.Text = "Просмотреть справку";
+            this.viewHelpToolStripMenuItem.Click += new System.EventHandler(this.viewHelpToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -149,39 +153,42 @@
             // 
             // listBox_output
             // 
+            this.listBox_output.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox_output.FormattingEnabled = true;
             this.listBox_output.Location = new System.Drawing.Point(12, 27);
             this.listBox_output.Name = "listBox_output";
-            this.listBox_output.Size = new System.Drawing.Size(418, 134);
+            this.listBox_output.Size = new System.Drawing.Size(657, 186);
             this.listBox_output.TabIndex = 1;
             // 
             // add_button
             // 
-            this.add_button.Location = new System.Drawing.Point(666, 298);
+            this.add_button.Location = new System.Drawing.Point(156, 151);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(75, 23);
-            this.add_button.TabIndex = 2;
-            this.add_button.Text = "add";
+            this.add_button.TabIndex = 9;
+            this.add_button.Text = "Добавить";
             this.add_button.UseVisualStyleBackColor = true;
             this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
             // del_button
             // 
-            this.del_button.Location = new System.Drawing.Point(747, 298);
+            this.del_button.Location = new System.Drawing.Point(237, 151);
             this.del_button.Name = "del_button";
             this.del_button.Size = new System.Drawing.Size(75, 23);
-            this.del_button.TabIndex = 3;
-            this.del_button.Text = "del";
+            this.del_button.TabIndex = 10;
+            this.del_button.Text = "Удалить";
             this.del_button.UseVisualStyleBackColor = true;
             this.del_button.Click += new System.EventHandler(this.del_button_Click);
             // 
             // clear_button
             // 
-            this.clear_button.Location = new System.Drawing.Point(823, 298);
+            this.clear_button.Location = new System.Drawing.Point(317, 151);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(75, 23);
-            this.clear_button.TabIndex = 4;
-            this.clear_button.Text = "clr";
+            this.clear_button.TabIndex = 11;
+            this.clear_button.Text = "Очистить";
             this.clear_button.UseVisualStyleBackColor = true;
             this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
             // 
@@ -209,27 +216,37 @@
             // numericUpDown_snatch
             // 
             this.numericUpDown_snatch.Location = new System.Drawing.Point(12, 32);
+            this.numericUpDown_snatch.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
             this.numericUpDown_snatch.Name = "numericUpDown_snatch";
             this.numericUpDown_snatch.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown_snatch.TabIndex = 4;
+            this.numericUpDown_snatch.TabIndex = 7;
             this.numericUpDown_snatch.ValueChanged += new System.EventHandler(this.numericUpDown_snatch_ValueChanged);
             // 
             // numericUpDown_clean_jerk
             // 
             this.numericUpDown_clean_jerk.Location = new System.Drawing.Point(12, 74);
+            this.numericUpDown_clean_jerk.Maximum = new decimal(new int[] {
+            350,
+            0,
+            0,
+            0});
             this.numericUpDown_clean_jerk.Name = "numericUpDown_clean_jerk";
             this.numericUpDown_clean_jerk.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown_clean_jerk.TabIndex = 5;
+            this.numericUpDown_clean_jerk.TabIndex = 8;
             this.numericUpDown_clean_jerk.ValueChanged += new System.EventHandler(this.numericUpDown_clean_jerk_ValueChanged);
             // 
             // radioButton_gmen
             // 
             this.radioButton_gmen.AutoSize = true;
             this.radioButton_gmen.Checked = true;
-            this.radioButton_gmen.Location = new System.Drawing.Point(145, 34);
+            this.radioButton_gmen.Location = new System.Drawing.Point(149, 32);
             this.radioButton_gmen.Name = "radioButton_gmen";
             this.radioButton_gmen.Size = new System.Drawing.Size(71, 17);
-            this.radioButton_gmen.TabIndex = 10;
+            this.radioButton_gmen.TabIndex = 4;
             this.radioButton_gmen.TabStop = true;
             this.radioButton_gmen.Text = "Мужской";
             this.radioButton_gmen.UseVisualStyleBackColor = true;
@@ -237,15 +254,21 @@
             // radioButton_gwomen
             // 
             this.radioButton_gwomen.AutoSize = true;
-            this.radioButton_gwomen.Location = new System.Drawing.Point(145, 57);
+            this.radioButton_gwomen.Location = new System.Drawing.Point(149, 62);
             this.radioButton_gwomen.Name = "radioButton_gwomen";
             this.radioButton_gwomen.Size = new System.Drawing.Size(72, 17);
-            this.radioButton_gwomen.TabIndex = 11;
+            this.radioButton_gwomen.TabIndex = 5;
             this.radioButton_gwomen.Text = "Женский";
             this.radioButton_gwomen.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.numericUpDown_bWeight);
+            this.groupBox1.Controls.Add(this.add_button);
+            this.groupBox1.Controls.Add(this.del_button);
+            this.groupBox1.Controls.Add(this.clear_button);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
@@ -256,22 +279,23 @@
             this.groupBox1.Controls.Add(this.textBox_lname);
             this.groupBox1.Controls.Add(this.radioButton_gmen);
             this.groupBox1.Controls.Add(this.textBox_country);
-            this.groupBox1.Location = new System.Drawing.Point(498, 82);
-            this.groupBox1.MinimumSize = new System.Drawing.Size(400, 210);
+            this.groupBox1.Location = new System.Drawing.Point(669, 27);
+            this.groupBox1.MaximumSize = new System.Drawing.Size(400, 185);
+            this.groupBox1.MinimumSize = new System.Drawing.Size(400, 185);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 210);
+            this.groupBox1.Size = new System.Drawing.Size(400, 185);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные о спортсмене:";
             // 
-            // label_summ
+            // label7
             // 
-            this.label_summ.AutoSize = true;
-            this.label_summ.Location = new System.Drawing.Point(114, 102);
-            this.label_summ.Name = "label_summ";
-            this.label_summ.Size = new System.Drawing.Size(18, 13);
-            this.label_summ.TabIndex = 18;
-            this.label_summ.Text = "-/-";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(146, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Пол:";
             // 
             // groupBox2
             // 
@@ -288,6 +312,24 @@
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Показанный результат:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 13);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Сумма двоеборья:";
+            // 
+            // label_summ
+            // 
+            this.label_summ.AutoSize = true;
+            this.label_summ.Location = new System.Drawing.Point(114, 102);
+            this.label_summ.Name = "label_summ";
+            this.label_summ.Size = new System.Drawing.Size(18, 13);
+            this.label_summ.TabIndex = 18;
+            this.label_summ.Text = "-/-";
             // 
             // label5
             // 
@@ -334,36 +376,47 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Имя:";
             // 
-            // label6
+            // label8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 102);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 13);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Сумма двоеборья:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(146, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Вес:";
             // 
-            // label7
+            // numericUpDown_bWeight
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(142, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Пол:";
+            this.numericUpDown_bWeight.Location = new System.Drawing.Point(149, 109);
+            this.numericUpDown_bWeight.Maximum = new decimal(new int[] {
+            180,
+            0,
+            0,
+            0});
+            this.numericUpDown_bWeight.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown_bWeight.Name = "numericUpDown_bWeight";
+            this.numericUpDown_bWeight.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDown_bWeight.TabIndex = 6;
+            this.numericUpDown_bWeight.Value = new decimal(new int[] {
+            65,
+            0,
+            0,
+            0});
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 562);
+            this.ClientSize = new System.Drawing.Size(1069, 237);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.clear_button);
-            this.Controls.Add(this.del_button);
-            this.Controls.Add(this.add_button);
             this.Controls.Add(this.listBox_output);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1085, 275);
             this.Name = "Form1";
             this.Text = "WeightLift 1.0";
             this.menuStrip1.ResumeLayout(false);
@@ -374,6 +427,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_bWeight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,6 +466,8 @@
         private System.Windows.Forms.Label label_summ;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDown_bWeight;
+        private System.Windows.Forms.Label label8;
 
     }
 }

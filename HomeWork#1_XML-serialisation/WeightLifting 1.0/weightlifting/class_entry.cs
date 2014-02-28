@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace weightlifting     {
     public class weightlift    {
-        public List<Athletes> Athlete { get; set; }
+        public List<Athlete> Athletes { get; set; }
     }
-    public class Athletes    {
-        public string gender { get; set; }
-        public string first_name { get; set; }
-        public string last_name { get; set; }
-        public string country { get; set; }
-        public int clean_jerk { get; set; }
-        public int snatch { get; set; }
-        public int summary_res { get; set; }
+    public class Athlete    {
+        public string gender { get; set; }      // Пол
+        public string first_name { get; set; }  // Имя
+        public string last_name { get; set; }   // Фамилия
+        public string country { get; set; }     // Страна
+        public int bWeight { get; set; }        // Вес
+        public int clean_jerk { get; set; }     // Толчок
+        public int snatch { get; set; }         // Рывок
+        public int summary_res { get; set; }    // Суммарный результат
 
         public override string ToString()        {
-            var str = first_name + last_name + country + clean_jerk + snatch + summary_res + gender;
+            var str = first_name + " " + last_name + " из " + country + ", с результатом: " + snatch + "/" + clean_jerk + ":" + summary_res + " || Вес:" + bWeight + ", " + gender;
             return str;
         }
     }

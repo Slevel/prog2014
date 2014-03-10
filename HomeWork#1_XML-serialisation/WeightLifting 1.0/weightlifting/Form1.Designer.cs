@@ -169,7 +169,7 @@
             this.listBox_output.Location = new System.Drawing.Point(12, 27);
             this.listBox_output.Name = "listBox_output";
             this.listBox_output.Size = new System.Drawing.Size(657, 186);
-            this.listBox_output.TabIndex = 1;
+            this.listBox_output.TabIndex = 12;
             // 
             // add_button
             // 

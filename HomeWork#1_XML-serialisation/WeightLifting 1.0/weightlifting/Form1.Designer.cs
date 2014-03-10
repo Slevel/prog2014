@@ -51,7 +51,6 @@
             this.radioButton_gmen = new System.Windows.Forms.RadioButton();
             this.radioButton_gwomen = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.report_button = new System.Windows.Forms.Button();
             this.numericUpDown_bWeight = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,6 +62,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_snatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_clean_jerk)).BeginInit();
@@ -88,6 +89,8 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.toolStripSeparator2,
+            this.printToolStripMenuItem,
+            this.toolStripSeparator3,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -95,6 +98,7 @@
             // 
             // openToolStripMenuItem
             // 
+            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.openToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
@@ -103,6 +107,7 @@
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
@@ -116,6 +121,7 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
@@ -134,6 +140,7 @@
             // 
             // viewHelpToolStripMenuItem
             // 
+            this.viewHelpToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewHelpToolStripMenuItem.Image")));
             this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
             this.viewHelpToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
@@ -147,6 +154,7 @@
             // 
             // copyrightsToolStripMenuItem
             // 
+            this.copyrightsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("copyrightsToolStripMenuItem.Image")));
             this.copyrightsToolStripMenuItem.Name = "copyrightsToolStripMenuItem";
             this.copyrightsToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.copyrightsToolStripMenuItem.Text = "О программе";
@@ -165,31 +173,40 @@
             // 
             // add_button
             // 
-            this.add_button.Location = new System.Drawing.Point(156, 151);
+            this.add_button.Image = ((System.Drawing.Image)(resources.GetObject("add_button.Image")));
+            this.add_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.add_button.Location = new System.Drawing.Point(142, 151);
             this.add_button.Name = "add_button";
-            this.add_button.Size = new System.Drawing.Size(75, 23);
+            this.add_button.Size = new System.Drawing.Size(82, 23);
             this.add_button.TabIndex = 9;
             this.add_button.Text = "Добавить";
+            this.add_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.add_button.UseVisualStyleBackColor = true;
             this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
             // del_button
             // 
-            this.del_button.Location = new System.Drawing.Point(237, 151);
+            this.del_button.Image = ((System.Drawing.Image)(resources.GetObject("del_button.Image")));
+            this.del_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.del_button.Location = new System.Drawing.Point(230, 151);
             this.del_button.Name = "del_button";
             this.del_button.Size = new System.Drawing.Size(75, 23);
             this.del_button.TabIndex = 10;
             this.del_button.Text = "Удалить";
+            this.del_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.del_button.UseVisualStyleBackColor = true;
             this.del_button.Click += new System.EventHandler(this.del_button_Click);
             // 
             // clear_button
             // 
-            this.clear_button.Location = new System.Drawing.Point(317, 151);
+            this.clear_button.Image = ((System.Drawing.Image)(resources.GetObject("clear_button.Image")));
+            this.clear_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clear_button.Location = new System.Drawing.Point(311, 151);
             this.clear_button.Name = "clear_button";
-            this.clear_button.Size = new System.Drawing.Size(75, 23);
+            this.clear_button.Size = new System.Drawing.Size(81, 23);
             this.clear_button.TabIndex = 11;
             this.clear_button.Text = "Очистить";
+            this.clear_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.clear_button.UseVisualStyleBackColor = true;
             this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
             // 
@@ -265,7 +282,6 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.report_button);
             this.groupBox1.Controls.Add(this.numericUpDown_bWeight);
             this.groupBox1.Controls.Add(this.add_button);
             this.groupBox1.Controls.Add(this.del_button);
@@ -289,17 +305,6 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные о спортсмене:";
-            // 
-            // report_button
-            // 
-            this.report_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.report_button.Location = new System.Drawing.Point(23, 151);
-            this.report_button.Name = "report_button";
-            this.report_button.Size = new System.Drawing.Size(75, 23);
-            this.report_button.TabIndex = 20;
-            this.report_button.Text = "Печать";
-            this.report_button.UseVisualStyleBackColor = true;
-            this.report_button.Click += new System.EventHandler(this.report_button_Click);
             // 
             // numericUpDown_bWeight
             // 
@@ -420,6 +425,20 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Имя:";
             // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.printToolStripMenuItem.Text = "Печать...";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(169, 6);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,7 +500,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDown_bWeight;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button report_button;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 
     }
 }

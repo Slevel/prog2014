@@ -141,11 +141,12 @@ namespace weightlifting{
         }
 
         // Отчёт
-        private void report_button_Click(object sender, EventArgs e)        {
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)        {
             var wr = new WL_report();
             weightlift wl = CreateAthleteItem();
-            wr.DataSource = new BindingSource() {DataSource = wl};
+            wr.DataSource = new BindingSource() { DataSource = wl };
             wr.ShowPreview();
         }
+        
     }
 }

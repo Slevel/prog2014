@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
+using DevExpress.XtraReports.UI;
 
 namespace weightlifting{
     public partial class Form1 : Form    {
@@ -90,16 +91,21 @@ namespace weightlifting{
             var result = save.ShowDialog(this);
             if (result == DialogResult.OK)      {
                 var fileName = save.FileName;
-                weightlift wl = new weightlift();
-                wl.Athletes = new List<Athlete>();
-                foreach (Athlete ath in listBox_output.Items)     {
-                    wl.Athletes.Add(ath);
-                }
+                var wl = CreateAthleteItem();
                 XmlSerializer xser = new XmlSerializer(typeof(weightlift));
                 var fileStream = File.Create(fileName);
                 xser.Serialize(fileStream, wl);
                 fileStream.Close();
             }
+        }
+        // Создание экземпляра класса weightlift
+        private weightlift CreateAthleteItem()        {
+            weightlift wl = new weightlift();
+            wl.Athletes = new List<Athlete>();
+            foreach (Athlete ath in listBox_output.Items)            {
+                wl.Athletes.Add(ath);
+            }
+            return wl;
         }
 
         // Выход по Ctrl+Q / MenuItem
@@ -130,9 +136,16 @@ namespace weightlifting{
         }
 
         // Справка
-        private void viewHelpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void viewHelpToolStripMenuItem_Click(object sender, EventArgs e)        {
             MessageBox.Show("Справка находится в разработке!", "Внимание", MessageBoxButtons.OK);
+        }
+
+        // Отчёт
+        private void report_button_Click(object sender, EventArgs e)        {
+            var wr = new WL_report();
+            weightlift wl = CreateAthleteItem();
+            wr.DataSource = new BindingSource() {DataSource = wl};
+            wr.ShowPreview();
         }
     }
 }

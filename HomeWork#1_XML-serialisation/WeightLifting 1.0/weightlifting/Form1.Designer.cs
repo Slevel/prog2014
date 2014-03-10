@@ -51,6 +51,9 @@
             this.radioButton_gmen = new System.Windows.Forms.RadioButton();
             this.radioButton_gwomen = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.report_button = new System.Windows.Forms.Button();
+            this.numericUpDown_bWeight = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,14 +63,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown_bWeight = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_snatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_clean_jerk)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_bWeight)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -264,6 +265,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.report_button);
             this.groupBox1.Controls.Add(this.numericUpDown_bWeight);
             this.groupBox1.Controls.Add(this.add_button);
             this.groupBox1.Controls.Add(this.del_button);
@@ -287,6 +289,48 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные о спортсмене:";
+            // 
+            // report_button
+            // 
+            this.report_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.report_button.Location = new System.Drawing.Point(23, 151);
+            this.report_button.Name = "report_button";
+            this.report_button.Size = new System.Drawing.Size(75, 23);
+            this.report_button.TabIndex = 20;
+            this.report_button.Text = "Печать";
+            this.report_button.UseVisualStyleBackColor = true;
+            this.report_button.Click += new System.EventHandler(this.report_button_Click);
+            // 
+            // numericUpDown_bWeight
+            // 
+            this.numericUpDown_bWeight.Location = new System.Drawing.Point(149, 109);
+            this.numericUpDown_bWeight.Maximum = new decimal(new int[] {
+            180,
+            0,
+            0,
+            0});
+            this.numericUpDown_bWeight.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown_bWeight.Name = "numericUpDown_bWeight";
+            this.numericUpDown_bWeight.Size = new System.Drawing.Size(53, 20);
+            this.numericUpDown_bWeight.TabIndex = 6;
+            this.numericUpDown_bWeight.Value = new decimal(new int[] {
+            65,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(146, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Вес:";
             // 
             // label7
             // 
@@ -376,37 +420,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Имя:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(146, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Вес:";
-            // 
-            // numericUpDown_bWeight
-            // 
-            this.numericUpDown_bWeight.Location = new System.Drawing.Point(149, 109);
-            this.numericUpDown_bWeight.Maximum = new decimal(new int[] {
-            180,
-            0,
-            0,
-            0});
-            this.numericUpDown_bWeight.Minimum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDown_bWeight.Name = "numericUpDown_bWeight";
-            this.numericUpDown_bWeight.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDown_bWeight.TabIndex = 6;
-            this.numericUpDown_bWeight.Value = new decimal(new int[] {
-            65,
-            0,
-            0,
-            0});
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,9 +438,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_clean_jerk)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_bWeight)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_bWeight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,6 +481,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDown_bWeight;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button report_button;
 
     }
 }
